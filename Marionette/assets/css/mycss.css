@@ -1,0 +1,12 @@
+#del{
+    display: inline-block
+}
+#del a{
+    text-decoration: none
+}
+th, td{
+    border:double;
+    width: 100px;
+    position:relative;
+    float: left
+}
