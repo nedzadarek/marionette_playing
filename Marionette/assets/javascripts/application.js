@@ -19,7 +19,13 @@ Herbatki = Backbone.Collection.extend({
 HerbataViewer = Backbone.Marionette.ItemView.extend({
     template: "#template_item",
     tagName: "li",
-    className: "herbata"
+    className: "herbata",
+    events: {
+    'click .disqualify': 'disqualify'
+    },
+    disqualify: function(){
+        this.model.destroy();
+    }
 });
 
 HerbatkiViewer = Backbone.Marionette.CompositeView.extend({
