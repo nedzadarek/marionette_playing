@@ -19,10 +19,10 @@
   </head>
   <body>
     <form>
-      <label for="tname">Name</label><input type="text" id="tname">
+      <label for="tname">Name</label><input type="text" id="tname"> 
       <label for="ttype">Type</label><input type="text" id="ttype">
       <label for="tcompany">Company</label><input type="text" id="tcompany"><br>
-      <button id="make_model" onclick=alert(document.getElementById("tname").val())>Make new model</button>
+      <button id="make_model" onclick="makemodel()">Make new model</button>
     </form>
     <div id="content">
     </div>
@@ -48,6 +48,14 @@
       <ol>
       
     </script>
-
+<script>
+  var name    = function() {return document.getElementById("tname").value};
+  var type    = function() {return document.getElementById("ttype").value};
+  var company = function() {return document.getElementById("tcompany").value};
+  makemodel = function() {
+    alert(name()+" " + type() + " " + company());
+    
+  };
+</script>
   </body>
 </html>

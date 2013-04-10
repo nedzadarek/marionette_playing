@@ -42,17 +42,17 @@ HerbatkiViewer = Backbone.Marionette.CompositeView.extend({
 })
 aplikacja.addInitializer(function(options){
         var herbatkiViewer = new HerbatkiViewer({
-            collection: options.collection1
+            collection: options.collection
         });
         aplikacja.mainRegion.show(herbatkiViewer);
 })
 $(document).ready(function(){
-        collection1 = new Herbatki([
+        herbatki = new Herbatki([
         new Herbata({name: "Pu-erh"}),
         new Herbata({name: "Roiboos"}),
         new Herbata({name: "Tetley"}),
         new Herbata({name: "Irving"})
         ]);
-    aplikacja.start({collection1:collection1});
+    aplikacja.start({collection:herbatki});
             
 });
