@@ -18,6 +18,12 @@
     <script src="./assets/javascripts/application.js"></script>
   </head>
   <body>
+    <form>
+      <label for="tname">Name</label><input type="text" id="tname">
+      <label for="ttype">Type</label><input type="text" id="ttype">
+      <label for="tcompany">Company</label><input type="text" id="tcompany"><br>
+      <button id="make_model" onclick=alert(document.getElementById("tname").val())>Make new model</button>
+    </form>
     <div id="content">
     </div>
     <script type="text/template" id="template_collection">
