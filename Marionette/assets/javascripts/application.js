@@ -56,3 +56,16 @@ $(document).ready(function(){
     aplikacja.start({collection:herbatki});
             
 });
+
+
+  var name    = function() {return document.getElementById("tname").value};
+  var type    = function() {return document.getElementById("ttype").value};
+  var company = function() {return document.getElementById("tcompany").value};
+  makemodel = function() {
+    var model = new Herbata({});
+    name().replace(/\s+/g,'') === '' ? 0 : model.set( "name",name() );
+    type().replace(/\s+/g,'') === '' ? 0 : model.set( "type",type() );
+    company().replace(/\s+/g,'') === '' ? 0 : model.set( "company", company() );
+    herbatki.add(model);
+    //herbatki.add({name: name().replace(/\s+/g,''), type: type(), company: company()}) ? alert("New model added!") : alert("Something went wrong")
+  };
